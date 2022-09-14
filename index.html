@@ -87,7 +87,36 @@
             <td>Pike's Peak</td> 
             <td>~3-4 hours</td>
         </tr>
-      </table>
+    </table>
+    <hr>
+    <h2>Code Section</h2>
+
+    
+    <blockquote cite="https://stackoverflow.com/questions/20295193/how-to-prevent-google-from-indexing-a-site/20295205#20295205">
+    My client asked me to prevent google bot from indexing the website, so I have added the following meta to 
+    the head tag of my main layer which (in theory) is the head of all pages:
+
+    &lt;meta name="googlebot" content="noindex"&gt;
+    This should prevent Google from indexing any pages, however, it is not preventing it. Apparently my client 
+    observed somehow that Google bots are still indexing the site 
+    (I do not know how he knows that Google is still indexing the site, because, as usual, clients are not too descriptive) so it 
+    seems that this is not solving the problem.
+
+    In fact I wanted to prevent google from indexing the site by adding a meta in the header of my template used at all the pages. 
+    Why is this still not enough for google to prevent it from indexing the site? How should I fix the issue?
+
+    Thank you very much.
+    </blockquote>
+    <a href="https://stackoverflow.com/questions/20295193/how-to-prevent-google-from-indexing-a-site/20295205#20295205">Source</a>
+    <pre>
+    <code>
+        &lt;meta name="robots" content="noindex, nofollow"&gt;
+        &lt;!-- or --&gt;
+        &lt;meta name="robots" content="none"&gt;
+        &lt;!-- or if you only care about Google... --&gt;
+        &lt;meta name="googlebot" content="noindex, nofollow"&gt;
+    </code>
+    </pre>
 
     <a href="aboutme.html">Read my AboutMe!</a>
 
